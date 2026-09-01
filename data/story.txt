@@ -1,0 +1,5 @@
+Once upon a time in a land far away,
+there lived a python programmer.
+He loved working with files.
+Text files, CSV files, and Binary files.
+He mastered them all.

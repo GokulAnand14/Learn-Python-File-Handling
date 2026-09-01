@@ -1,0 +1,5 @@
+INFO: System started
+WARNING: Low memory
+ERROR: Failed to open file
+INFO: User logged in
+ERROR: Database connection timeout
