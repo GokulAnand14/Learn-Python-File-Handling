@@ -82,6 +82,31 @@ def setup_data():
     with open('data/image.jpg', 'wb') as f:
         f.write(os.urandom(4096)) # 4KB of random bytes
 
+    # --- Added for Class 12 Boards Preparation ---
+    # 10. credentials.csv
+    with open('data/credentials.csv', 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(["UserID", "Password"])
+        writer.writerow(["admin", "root123"])
+        writer.writerow(["user01", "password@1"])
+        writer.writerow(["gokul", "boardexams2024"])
+
+    # 11. students.csv (Empty initially with headers)
+    with open('data/students.csv', 'w', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow(["RollNo", "Name", "Marks"])
+
+    # 12. students.dat (Binary file with pickled list of dicts)
+    students_data = [
+        {"RollNo": 1, "Name": "Aarav", "Marks": 85},
+        {"RollNo": 2, "Name": "Riya", "Marks": 92},
+        {"RollNo": 3, "Name": "Vikram", "Marks": 78},
+        {"RollNo": 4, "Name": "Neha", "Marks": 95}
+    ]
+    with open('data/students.dat', 'wb') as f:
+        import pickle
+        pickle.dump(students_data, f)
+
 if __name__ == '__main__':
     setup_data()
     print("Data files generated successfully in the 'data' directory.")

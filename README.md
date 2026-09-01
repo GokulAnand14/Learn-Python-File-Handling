@@ -87,3 +87,44 @@ Write a program using the `struct` module to read this file, extract all records
 
 Take the binary file `data/image.jpg`. Append a secret message string (e.g., "SUPER_SECRET_KEY=42") to the end of the file, then create a new file `data/secret_image.jpg`. Since image viewers stop reading after the EOF marker, the image will still be viewable. 
 Then, write a second function that reads `data/secret_image.jpg`, extracts the hidden string from the end of the file, and prints it out.
+
+---
+
+## Class 12 Board Examination Specials
+
+These exercises are specifically curated to match the pattern of questions asked in the CBSE Class 12 Computer Science Board Exams.
+
+### 13. Text File Character Statistics (Board Level)
+[Solution](solutions/13.py)
+
+Write a program to read a text file `data/story.txt` and display the count of vowels, consonants, uppercase characters, and lowercase characters present in the file.
+
+### 14. Line Filter (Board Level)
+[Solution](solutions/14.py)
+
+Read `data/story.txt`. Write a function that reads the file line by line and copies only those lines that start with the letter 'T' or 't' into a new file `data/t_lines.txt`.
+
+### 15. Search in CSV (Board Level)
+[Solution](solutions/15.py)
+
+Read a CSV file `data/credentials.csv` containing `UserID` and `Password`. Write a function `search_user(user_id)` to search for the given `user_id`. Print the password if found, else print "User not found".
+
+### 16. Dynamic CSV Append (Board Level)
+[Solution](solutions/16.py)
+
+Write a function `add_student()` to append new student records (`RollNo`, `Name`, `Marks`) into `data/students.csv`. Note: The solution file will demonstrate adding a hardcoded record, but in a real exam, you would use `input()`.
+
+### 17. Search a Record in Binary File (Board Level)
+[Solution](solutions/17.py)
+
+A binary file `data/students.dat` contains a list of dictionaries with keys `RollNo`, `Name`, and `Marks`. Write a function `search_student(roll_no)` to search and display the details of a student. Use the `pickle` module.
+
+### 18. Update a Record in Binary File (Board Level)
+[Solution](solutions/18.py)
+
+Write a function `update_marks(roll_no, new_marks)` to update the marks of a student in `data/students.dat`. Read the list, find the student, update the dictionary, and rewrite the list back to the binary file.
+
+### 19. Delete a Record in Binary File (Board Level)
+[Solution](solutions/19.py)
+
+Write a function `delete_student(roll_no)` to delete a specific student's record from `data/students.dat`. Read the records, filter out the specific roll number, and overwrite the file with the updated list.
