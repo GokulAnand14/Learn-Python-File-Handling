@@ -138,3 +138,19 @@ Write a function that opens `data/story.txt` in read mode. It should:
 3. Print the new position of the file pointer.
 4. Move the file pointer back to the 5th byte using `seek()`.
 5. Read and print the next 5 characters to demonstrate the change in position.
+
+### 21. Text File - Word Search and Count (Board Level)
+[Solution](solutions/21.py)
+
+Write a function that reads `data/story.txt` and counts how many times the word "files" appears in it (case-insensitive). Also, print each line where the word is found. 
+
+### 22. Binary File - Appending and Sequential Reading (Board Level)
+[Solution](solutions/22.py)
+
+Write a function `append_student()` to append a dictionary `{"RollNo": 5, "Name": "Rahul", "Marks": 88}` to the binary file `data/students.dat`. 
+Then, write a second function `read_all_students()` that reads **all** records from the file sequentially and prints them. **Note**: You must use a `while True` loop and handle the `EOFError` exception, which is a key concept in board exams.
+
+### 23. CSV File with Custom Delimiters (Board Level)
+[Solution](solutions/23.py)
+
+Standard CSVs use commas, but exams often ask for custom delimiters. Write a function that creates a new CSV file `data/items.csv` where the columns `Item_ID`, `Item_Name`, and `Price` are separated by a pipe character (`|`). Then write a function to read and display the contents of this pipe-delimited CSV.

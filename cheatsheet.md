@@ -149,12 +149,18 @@ import pickle
 data = {"key": "value", "numbers": [1, 2, 3]}
 
 # Save object to file
-with open('data.pkl', 'wb') as f:
+with open('data.dat', 'wb') as f:
     pickle.dump(data, f)
 
-# Load object from file
-with open('data.pkl', 'rb') as f:
-    loaded_data = pickle.load(f)
+# Load multiple objects from file (Crucial for Boards)
+# When reading multiple records, you MUST use a try-except block for EOFError
+with open('data.dat', 'rb') as f:
+    try:
+        while True:
+            loaded_data = pickle.load(f)
+            print(loaded_data)
+    except EOFError:
+        pass # Reached the end of the file
 ```
 
 ### The `struct` Module
