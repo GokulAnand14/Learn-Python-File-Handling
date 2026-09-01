@@ -128,3 +128,13 @@ Write a function `update_marks(roll_no, new_marks)` to update the marks of a stu
 [Solution](solutions/19.py)
 
 Write a function `delete_student(roll_no)` to delete a specific student's record from `data/students.dat`. Read the records, filter out the specific roll number, and overwrite the file with the updated list.
+
+### 20. Random Access with Seek and Tell (Board Level)
+[Solution](solutions/20.py)
+
+Write a function that opens `data/story.txt` in read mode. It should:
+1. Print the initial position of the file pointer using `tell()`.
+2. Read the first 10 characters and print them.
+3. Print the new position of the file pointer.
+4. Move the file pointer back to the 5th byte using `seek()`.
+5. Read and print the next 5 characters to demonstrate the change in position.

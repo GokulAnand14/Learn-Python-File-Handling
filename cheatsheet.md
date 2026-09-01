@@ -103,7 +103,31 @@ with open('output.csv', 'w', newline='') as f:
 
 ---
 
-## 4. Binary Files
+## 4. Random Access (`seek` and `tell`)
+Python allows you to jump around a file without having to read it sequentially. This is highly tested in board exams.
+
+- **`file.tell()`**: Returns the current byte position of the file pointer.
+- **`file.seek(offset, whence)`**: Moves the file pointer to a specific byte position.
+  - `whence = 0`: Absolute file positioning (Default. From the beginning).
+  - `whence = 1`: Seek relative to the current position (Only valid in binary mode `b`).
+  - `whence = 2`: Seek relative to the file's end (Only valid in binary mode `b`).
+
+```python
+with open('data.txt', 'r') as f:
+    print(f.tell())   # Output: 0 (Start of file)
+    
+    data = f.read(5)  # Read 5 characters
+    print(data)
+    
+    print(f.tell())   # Output: 5
+    
+    f.seek(0)         # Jump back to the beginning of the file
+    print(f.tell())   # Output: 0
+```
+
+---
+
+## 5. Binary Files
 Binary files deal with raw bytes (`bytes` objects) instead of strings. 
 
 ### Reading and Writing Raw Bytes
