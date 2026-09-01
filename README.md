@@ -1,5 +1,7 @@
 # Learn Python File Handling
-If you haven't already make sure you brush up on Python File Handling basics (`open`, `read`, `write`, `csv` module, `pickle` module).
+If you haven't already make sure you brush up on Python File Handling basics (`open`, `read`, `write`, `csv` module, `pickle` module). 
+
+We have provided a comprehensive **[Cheat Sheet](cheatsheet.md)**. Please review it before diving into the exercises!
 
 After reviewing the basics, try to complete the exercises listed below using the data provided in this repository.
 
